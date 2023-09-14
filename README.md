@@ -7,6 +7,9 @@ Welcome to TimeTracker, a project designed to help you efficiently track your ti
 - Requirements
 - Getting Started
   - Clone the Repository
+  - Build Docker Containers
+  - Install Laravel and Database
+  - Compile Assets
   - Run Docker Compose
   - Access the Application
 - Stopping the Application
@@ -26,42 +29,16 @@ Follow these steps to get the TimeTracker project up and running:
 
 ### Clone the Repository
 
-git clone https://github.com/yourusername/TimeTracker.git
+git clone https://github.com/marcostorrent/degustabox-timetracker-marcostorrent.git
 cd TimeTracker
 
-### Run Docker Compose
+### Build Docker Containers
 
 To start the Docker environment, use the following command:
 
-docker-compose up -d
-
-This command will initiate the necessary containers to run the TimeTracker application.
-
-### Access the Application
-
-Once Docker Compose has completed creating the containers, you can access the TimeTracker application in your web browser. Open your browser and visit:
-
-http://localhost:8000
-
-Your TimeTracker application should be operational!
-
-## Stopping the Application
-
-To halt the application and Docker containers, you can use the following command:
-
-docker-compose down
-
-This will cease and remove the containers while preserving your application's data.
-
-## License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it as needed.
-
-
-
-#aaa
 docker-compose up -d --build
 
+### Install Laravel and Database
 
 docker exec -it php bash -c "composer update"
 docker exec -it php bash -c "composer install"
@@ -72,4 +49,22 @@ docker exec -it php php artisan storage:link
 docker exec -it php php artisan config:cache
 docker exec -it php php artisan route:cache
 
+### Compile Assets
+
 docker exec -it php bash -c "npm run build"
+
+### Run Docker Compose
+
+Once Docker Compose has completed creating the containers, you can access the TimeTracker application in your web browser. Open your browser and visit:
+
+http://localhost:8888
+
+TimeTracker application should be operational!
+
+## Stopping the Application
+
+To halt the application and Docker containers, you can use the following command:
+
+docker-compose down
+
+This will cease and remove the containers while preserving your application's data.
