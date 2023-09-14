@@ -8,6 +8,7 @@ RUN docker-php-ext-install pdo pdo_mysql
 RUN apk add --no-cache bash
 RUN apk add --no-cache nodejs npm && npm install -g npm
 WORKDIR /var/www/html
+ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer update && composer install
 RUN npm install bootstrap
 RUN php artisan key:generate
