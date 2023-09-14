@@ -27,7 +27,8 @@
                 <label for="taskName">Name:</label>
                 <input type="text" class="form-control" id="taskName" placeholder="Enter task name">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" id="addTask">Add</button>
+            <button type="button" class="btn btn-danger" id="stopTask">Stop</button>
         </form>
     </div>
 
@@ -36,32 +37,23 @@
         <h2>Summary of the Time Tracker</h2>
         <table class="table">
             <thead>
-                <tr>
-                    <th>ID</th>
+                <tr>                    
                     <th>Name</th>
-                    <th>Time tracked</th> <!-- Modificado a "Time tracked" -->
+                    <th>Time tracked today</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>2 hours</td> <!-- Ejemplo de tiempo registrado -->
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>3 hours</td> <!-- Ejemplo de tiempo registrado -->
-                </tr>
+
             </tbody>
         </table>
     </div>
 
-    <!-- Text for Worked Time Today -->
-    <div class="container mt-4">
+    <!-- Worked Time Today -->
+    <div class="container mt-4 todayTime">
         <h2>Worked Time Today</h2>
-        <p>Today's worked time along with the date.</p>
+        <p></p>
     </div>
+
 </body>
 
 </html>
